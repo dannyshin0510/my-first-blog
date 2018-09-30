@@ -6,7 +6,15 @@
         <div>
             <h1><a href="/">Welcome to Danny's Blog</a></h1>
         </div>
-
+            <h1><a href="/">Django Girls Blog</a></h1>
+        </div>
+            {% for post in posts %}
+              <div>
+                    <p>published: {{ post.published_date }}</p>
+                    <h1><a href="">{{ post.title }}</a></h1>
+                    <p>{{ post.text|linebreaksbr }}</p>
+                </div>
+            {% endfor %}
         <div>
             <p>published: 30.08.2018</p>
             <h2><a href="">My first post</a></h2>
